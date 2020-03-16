@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500&display=swap');
+
+/* landing page pic and background text */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: url('/black-sunset.png') no-repeat;
+  background-size: cover;
+}
+
+.box {
+  width: 450px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 40px;
+  text-align: center;
+  margin: auto;
+  margin-top: 5%;
+  color: white;
+  font-family: arial;
+  border-radius: 5%;
+}
+
+.box-img {
+  height: inherit;
+  width: 375px;
+  border-radius: inherit;
+}
+
+/* nav bar */
+li, a, button {
+  font-family: "Montderrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+}
+
+.nav_links {
+  list-style: none;
+}
+
+.nav_links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav_links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+  color: #0088a9;
+}
+
+button {
+  padding: 9px 25px;
+  background-color: rgba(0, 136, 169, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover {
+  background-color: rgba(0, 136, 169, 0.8);
+}
+
+/* social media icons */
+.socials ul {
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  padding: 0;
+  margin: 0;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+
+.socials ul li {
+  list-style: none;
+  margin: 0 15px;
+}
+
+.socials ul li .fa {
+  font-size: 30px;
+  line-height: 60px;
+  transition: 0.6s;
+  color: #000;
+}
+
+.socials ul li .fa:hover {
+  color: #fff;
+}
+
+.socials ul li a {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #fff;
+  text-align: center;
+  transition: 0.6s;
+  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
+}
+
+.socials ul li a:hover {
+  transform: translate(0, -10px);
+}
+.socials ul li:nth-child(1) a:hover {
+  background-color: #3b5999;
+}
+
+.socials ul li:nth-child(2) a:hover {
+  background-color: #55acee;
+}
+
+.socials ul li:nth-child(3) a:hover {
+  background-color: #e4405f;
+}
+
+.socials ul li:nth-child(4) a:hover {
+  background-color: #cd201f;
+}
+
+.socials ul li:nth-child(5) a:hover {
+  background-color: #0077B5;
+}
+
+/* travel page*/
+.slideshow {
+  margin: 0;
+  padding: 0;
+  background: #34495e;
+}
+
+.slidershow {
+  width: 700px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.slidershow_middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.slide_navigation {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.bar {
+  /* width: 50px; */
+  /* height: 10px; */
+  width: 55px;
+  height: 15px;
+  border: 2px solid #fff;
+  margin: 5px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.bar:hover {
+  background: #fff;
+}
+
+input[name="r"] {
+  position: absolute;
+  visibility: hidden;
+}
+
+.slides {
+  /* width: 500%; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.slide {
+  /* width: 20%; */
+  transition: 0.6s;
+  display: none;
+  text-align: center;
+  margin: auto;
+}
+
+.s1 {
+  display: block;
+}
+
+.slide img {
+  width: auto;
+  height: 100vh;
+}
+
+#r1:checked ~ .s1  {
+  /* margin-left: 0; */
+  display: block;
+}
+
+#r2:checked ~ .s2 {
+  display: block;
+  /* margin-left: -20%; */
+}
+
+#r2:checked ~ .s1 {
+  display: none;
+}
+
+#r3:checked ~ .s3 {
+  display: block;
+  /* margin-left: -40%; */
+}
+
+#r3:checked ~ .s1 {
+  display: none;
+}
+
+#r4:checked ~ .s4 {
+  display: block;
+  /* margin-left: -60%; */
+}
+
+#r4:checked ~ .s1 {
+  display: none;
+}
+
+#r5:checked ~ .s5 {
+  display: block;
+  /* margin-left: -80%; */
+}
+
+#r5:checked ~ .s1 {
+  display: none;
+}
+
+/* More info page */
+body.about_me h1 {
+  color: white;
+  padding: 0 20px;
+}
+
+body.about_me p {
+  color: white;
+  padding: 0 20px;
+}
+
+body.about_me {
+  border: 2px solid white;
+}
+
+/* CSS to interact with JavaScript functionality for challehnge 3, using onclick for the contact button*/
+.contact {
+	border: 5px solid white;
+	border-radius: 10px;
+	width: 500px;
+  margin: 10px;
+  color: white;
+}
+
+.hidden {
+	display: none;
+}
+
+.heading {
+	display: flex;
+	border-bottom: 3px solid white;
+	align-items: center;
+	justify-content: space-between;
+  padding: 0 20px;
+  background-color: rgba(0, 136, 169, 1);
+}
+
+.heading p {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+}
+
+.details {
+  padding: 0 20px;
+  color: white;
+}
+
+.btn {
+  color: white;
+}
+
+#email {
+  padding-bottom: 10px;
+}

@@ -1,0 +1,17 @@
+.container {
+    width: 100vw;
+}
+
+.lead {
+    /* width: 100vw; */
+    text-align: center;
+}
+
+.display-4 {
+    text-align: center;
+}
+
+.photos {
+    display: flex;
+    flex-direction: column;
+}
